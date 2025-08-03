@@ -16,15 +16,16 @@
       color: #eaeaea;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
       min-height: 100vh;
       text-align: center;
     }
 
+    header {
+      margin-top: 4rem;
+    }
+
     h1 {
       font-size: 2.8rem;
-      margin-top: 4rem;
       margin-bottom: 0.3rem;
       color: #ff00ff;
       text-shadow: none;
@@ -38,12 +39,16 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
 
+    .spacer {
+      flex: 1;
+    }
+
     .nav-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .nav-links a {
@@ -66,6 +71,7 @@
     footer {
       font-size: 0.8rem;
       color: #888;
+      text-align: center;
       margin-bottom: 1rem;
     }
 
@@ -74,9 +80,11 @@
         flex-direction: column;
         gap: 0.8rem;
       }
+
       .nav-links a {
         width: 80%;
       }
+
       h1 {
         font-size: 2rem;
       }
@@ -85,10 +93,12 @@
 </head>
 <body>
 
-  <div>
+  <header>
     <h1>Sarah Villanova Borges</h1>
     <h2>Astrophysicist, PhD Candidate, University of Wisconsin-Milwaukee</h2>
-  </div>
+  </header>
+
+  <div class="spacer"></div> <!-- pushes content downward -->
 
   <div class="nav-links">
     <a href="about.html">About Me</a>
