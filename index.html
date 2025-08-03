@@ -1,178 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Academic website of Sarah Villanova Borges, Astrophysicist" />
-<meta name="author" content="Sarah Villanova Borges" />
-<title>Sarah Villanova Borges - Astrophysicist</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-  :root {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --accent-color: #d18aff; /* soft purple/pink */
-    --link-color: #f5a9f2;
-    --nav-bg: #1e1e1e;
-    --section-bg: #1a1a1a;
-    --border-color: #3c1f4a;
-  }
-  body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  header {
-    background-color: var(--nav-bg);
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--border-color);
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: var(--accent-color);
-  }
-  nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: var(--link-color);
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  section {
-    background-color: var(--section-bg);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(209,138,255,0.15);
-  }
-  section h2 {
-    color: var(--accent-color);
-    margin-top: 0;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.3rem;
-  }
-  a.button {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  a.button:hover {
-    background-color: var(--link-color);
-    color: var(--bg-color);
-  }
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    color: #888;
-    border-top: 1px solid var(--border-color);
-  }
-  /* Responsive */
-  @media (max-width: 600px) {
-    header {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah Villanova Borges</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: black url('https://upload.wikimedia.org/wikipedia/commons/0/09/Milky_Way_Night_Sky_Black_Rock_Desert_Nevada.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #eaeaea;
+      display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
     }
-    nav {
-      margin-top: 0.8rem;
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.3rem;
+      color: #ffddff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
-    nav a {
-      margin-left: 0;
-      margin-right: 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #ccc;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
-  }
-</style>
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 200px;
+    }
+
+    .nav-links a {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0.8rem;
+      color: #eaeaea;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #d18aff;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #d18aff;
+      color: #000;
+      border-color: #f5a9f2;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .nav-links {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
+
   <h1>Sarah Villanova Borges</h1>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#cv">CV</a>
-    <a href="#projects">Projects</a>
-    <a href="#outreach">Outreach</a>
-    <a href="#contact">Contact</a>
-    <a href="#personal">Personal</a>
-  </nav>
-</header>
+  <h2>Astrophysicist</h2>
 
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm Sarah Villanova Borges, an astrophysicist passionate about exploring the cosmos and sharing science with everyone. My research focuses on [brief description of your research interests].</p>
-  </section>
+  <div class="nav-links">
+    <a href="about.html">About Me</a>
+    <a href="cv.html">CV</a>
+    <a href="projects.html">Projects</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="contact.html">Contact</a>
+    <a href="personal.html">Personal</a>
+  </div>
 
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>Download my full CV below or browse highlights here.</p>
-    <a href="your-cv.pdf" class="button" target="_blank" rel="noopener">Download CV (PDF)</a>
-    <ul>
-      <li>PhD in Astrophysics, University X (Year)</li>
-      <li>Research Fellow at Institute Y</li>
-      <li>Publications: [number] peer-reviewed papers</li>
-    </ul>
-  </section>
+  <footer>&copy; 2025 Sarah Villanova Borges</footer>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Here are some research projects and collaborations I've worked on:</p>
-    <ul>
-      <li><strong>Project A:</strong> Description and links</li>
-      <li><strong>Project B:</strong> Description and links</li>
-      <li><strong>Project C:</strong> Description and links</li>
-    </ul>
-  </section>
-
-  <section id="outreach">
-    <h2>Outreach</h2>
-    <p>I’m committed to science communication through talks, mentoring, and public events.</p>
-    <ul>
-      <li>Guest Speaker at Science Festival 2024</li>
-      <li>Mentoring undergraduate students</li>
-      <li>Blog articles and public talks</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out via email or social media!</p>
-    <ul>
-      <li>Email: <a href="mailto:sarah.email@example.com" style="color: var(--link-color);">sarah.email@example.com</a></li>
-      <li>Twitter: <a href="https://twitter.com/yourhandle" target="_blank" style="color: var(--link-color);" rel="noopener">@yourhandle</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--link-color);" rel="noopener">linkedin.com/in/yourprofile</a></li>
-    </ul>
-  </section>
-
-  <section id="personal">
-    <h2>Personal</h2>
-    <p>When I’m not stargazing or crunching data, I enjoy [hobbies, interests, or fun facts].</p>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Sarah Villanova Borges — Astrophysicist
-</footer>
 </body>
 </html>
