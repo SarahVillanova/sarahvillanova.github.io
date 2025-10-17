@@ -8,48 +8,23 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #000;
+      background-image: url('background.png'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #eaeaea;
     }
 
-    .top-image {
-      width: 100%;
-      display: block;
-    }
-
-    .image-wrapper {
-      background-color: #000;
-    }
-
-    .main-layout {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 1.5rem;
+    /* Semi-transparent overlay */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
       padding: 2rem;
-      max-width: 1600px;
-      margin: auto;
-    }
-
-    .photo-column {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      flex: 1;
-      min-width: 150px;
-      max-width: 200px;
-    }
-
-    .photo-column img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(209, 138, 255, 0.4);
-      object-fit: cover;
     }
 
     .content {
-      flex: 3;
-      max-width: 700px;
+      max-width: 900px;
+      margin: auto;
     }
 
     h1 {
@@ -57,7 +32,6 @@
       color: #ffddff;
       border-bottom: 2px solid #d18aff;
       padding-bottom: 0.5rem;
-      margin-top: 0;
     }
 
     p {
@@ -73,42 +47,10 @@
     a:hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 1000px) {
-      .main-layout {
-        flex-direction: column;
-        align-items: center;
-      }
-      .photo-column {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 100%;
-      }
-      .photo-column img {
-        width: 30%;
-        min-width: 120px;
-      }
-    }
   </style>
 </head>
 <body>
-
-  <!-- Top banner -->
-  <div class="image-wrapper">
-    <img class="top-image" src="pne.png" alt="Aesthetic astrophysics-themed banner">
-  </div>
-
-  <div class="main-layout">
-
-    <!-- Left column of images -->
-    <div class="photo-column">
-      <img src="pne.png" alt="Adventure photo left 1">
-      <img src="pne.png" alt="Adventure photo left 2">
-      <img src="pne.png" alt="Adventure photo left 3">
-    </div>
-
-    <!-- Center content -->
+  <div class="overlay">
     <div class="content">
       <h1>About Me</h1>
 
@@ -144,15 +86,6 @@
         Learn more about my <a href="cv.html">CV</a>, <a href="projects.html">research projects</a>, or <a href="contact.html">get in touch</a>.
       </p>
     </div>
-
-    <!-- Right column of images -->
-    <div class="photo-column">
-      <img src="pne.png" alt="Adventure photo right 1">
-      <img src="pne.png" alt="Adventure photo right 2">
-      <img src="pne.png" alt="Adventure photo right 3">
-    </div>
-
   </div>
-
 </body>
 </html>
