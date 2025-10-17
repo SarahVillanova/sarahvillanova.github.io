@@ -46,12 +46,14 @@
       margin-bottom: 1.5rem;
     }
 
+    /* Smaller, centered video */
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 ratio */
+      width: 70%;
+      margin: 1.5rem auto;
+      padding-bottom: 39.375%; /* 16:9 ratio scaled to 70% width */
       height: 0;
       overflow: hidden;
-      margin-bottom: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(209, 138, 255, 0.5);
     }
@@ -63,6 +65,13 @@
       width: 100%;
       height: 100%;
       border: none;
+    }
+
+    @media (max-width: 768px) {
+      .video-wrapper {
+        width: 100%;
+        padding-bottom: 56.25%;
+      }
     }
 
     a {
@@ -86,7 +95,7 @@
 
       <h2>Common Envelope Simulations</h2>
       <p>
-Common envelope. What is? What do i do?
+        The common envelope phase is one of the least understood but most crucial stages in binary star evolution. During this phase, one star expands and engulfs its companion, creating a shared gaseous envelope. This process can lead to the formation of close compact binaries, such as white dwarf–neutron star or black hole–neutron star systems, which are key sources of gravitational waves.
       </p>
 
       <p>
@@ -99,7 +108,7 @@ Common envelope. What is? What do i do?
       </p>
 
       <p>
-      My work....
+        My work on emission models explores how the magnetic field geometry and surface processes of magnetars produce their characteristic X-ray and gamma-ray emission. By comparing theoretical predictions with observational data, we can gain insight into their magnetic evolution, crustal dynamics, and the mechanisms behind their bursts and flares.
       </p>
 
       <p>
