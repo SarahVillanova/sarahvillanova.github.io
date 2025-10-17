@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Who am I?</title>
+  <title>Outreach</title>
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-image: url('background.jpg'); /* Replace with your background image */
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background-color: #000;
       color: #eaeaea;
     }
 
-    /* Semi-transparent overlay */
     .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.85);
       min-height: 100vh;
       padding: 2rem;
     }
@@ -32,18 +28,40 @@
       color: #ffddff;
       border-bottom: 2px solid #d18aff;
       padding-bottom: 0.5rem;
+      margin-top: 0;
     }
 
-    p {
-      line-height: 1.6;
+    .video-section {
+      margin-top: 2rem;
+    }
+
+    .video-section h2 {
+      font-size: 1.8rem;
+      color: #d18aff;
+      margin-bottom: 0.5rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
       margin-bottom: 1.5rem;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     a {
       color: #d18aff;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
@@ -52,39 +70,61 @@
 <body>
   <div class="overlay">
     <div class="content">
-      <h1>About Me</h1>
+      <h1>Outreach & Public Engagement</h1>
 
       <p>
-        Hi, I’m <strong>Sarah Villanova Borges</strong>, and I was born in Minas Gerais, Brazil, a place without the famous beaches or the Amazon rainforest that most people picture when they think of Brazil. Instead, we have hills, lots of them. Look to the horizon, and you’ll see rolling green bumps covered in short vegetation. We also have incredible food and beautiful historical cities. If you ever go to Brazil, I highly recommend visiting!
+        I’m passionate about bringing astrophysics and astronomy to broader audiences — from students and science enthusiasts to general public events. Below are a few of the outreach talks, presentations, and interviews I’ve participated in. Please feel free to explore the videos, and get in touch if you’re interested in collaborating on an event.
       </p>
 
-      <p>
-        I come from a lineage of engineers, my mom and her dad before her both graduated in civil engineering from UFJF. As soon as I learned how to talk, I dreamed of following in their footsteps. But life had another plan for me, because soon enough I fell in love with astronomy.
-      </p>
+      <div class="video-section">
+        <h2>Talk: [Title for Video 1]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/MHQ6qt7C7Jc" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <p>
-        Growing up in the early 2000s, I was surrounded by news about space shuttles, the discovery of exoplanets, and cosmology, and that wonder stayed with me. At some point, I found a compromise between my childhood dream of becoming an engineer and my fascination with the stars: I decided to study aerospace engineering. I graduated in 2017 from ITA (Instituto Tecnológico de Aeronáutica).
-      </p>
+      <div class="video-section">
+        <h2>Lecture: [Title for Video 2]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/phEO6f4VGCI?start=2098" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <p>
-        But the stars didn’t want to let me go without a fight. I went on to do a master’s in physics (also at ITA), and now I’m in the final year of my Ph.D. at the University of Wisconsin–Milwaukee, where I work on numerical simulations of common envelope evolution.
-      </p>
+      <div class="video-section">
+        <h2>Presentation: [Title for Video 3]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/zn7KT1a47wo?start=2337" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <p>
-        There are many things I love about being a researcher. First, I truly enjoy my research itself. Second, I’m passionate about science communication, sharing the beauty of astrophysics with others. And third, I love the opportunities to travel and live in different places that research brings.
-      </p>
+      <div class="video-section">
+        <h2>Interview: [Title for Video 4]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/fIZVzMdeOxQ?start=126" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <p>
-        Outside of work, I love to keep my hands and mind busy. You’ll often find me doing jigsaw puzzles, reading, listening to music, or traveling. I also enjoy sewing, cooking, and going to concerts and music festivals whenever I can.
-      </p>
+      <div class="video-section">
+        <h2>Talk: [Title for Video 5]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/aPWXub0M6pQ?start=579" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <p>
-        I believe that adventure, whether it’s a journey to uncover the mysteries of the universe or one through life itself, is what makes everything worthwhile.
-      </p>
+      <div class="video-section">
+        <h2>Presentation: [Title for Video 6]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/P82kAsoFvAk" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <p>
-        Learn more about my <a href="cv.html">CV</a>, <a href="projects.html">research projects</a>, or <a href="contact.html">get in touch</a>.
-      </p>
+      <div class="video-section">
+        <h2>Series Session: [Title for Video 7]</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Kkcps9R28to?list=PLp_A0eS7BZhPkrAoCHn-k7ABTduD7yk1S&index=3" allowfullscreen></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
 </body>
