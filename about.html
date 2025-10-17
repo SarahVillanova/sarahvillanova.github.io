@@ -15,11 +15,43 @@
       color: #eaeaea;
     }
 
-    /* Semi-transparent overlay */
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #d18aff;
+      z-index: 1000;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0.8rem 2rem;
+    }
+
+    .nav-links a {
+      color: #eaeaea;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #d18aff;
+    }
+
+    .nav-links a.active {
+      color: #ffddff;
+      border-bottom: 2px solid #d18aff;
+    }
+
+    /* ===== CONTENT ===== */
     .overlay {
       background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
-      padding: 2rem;
+      padding: 6rem 2rem 2rem; /* Add top padding to avoid overlapping navbar */
     }
 
     .content {
@@ -47,9 +79,33 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        margin: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="research.html">My Research</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
   <div class="overlay">
     <div class="content">
       <h1>About Me</h1>
@@ -83,9 +139,10 @@
       </p>
 
       <p>
-        Learn more about my <a href="cv.html">CV</a>, <a href="projects.html">research projects</a>, or <a href="contact.html">get in touch</a>.
+        Learn more about my <a href="cv.html">CV</a>, <a href="research.html">research projects</a>, or <a href="contact.html">get in touch</a>.
       </p>
     </div>
   </div>
+
 </body>
 </html>
