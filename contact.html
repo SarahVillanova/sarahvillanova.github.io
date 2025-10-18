@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Keep in touch :) </title>
+  <title>Keep in touch :)</title>
   <style>
     body {
       margin: 0;
@@ -15,16 +15,62 @@
       color: #eaeaea;
     }
 
-    /* Semi-transparent overlay */
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #d18aff;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #eaeaea;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #d18aff;
+    }
+
+    .nav-links a.active {
+      color: #ffddff;
+      border-bottom: 2px solid #d18aff;
+      padding-bottom: 0.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+    /* ===== PAGE CONTENT ===== */
     .overlay {
       background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
-      padding: 2rem;
+      padding: 6rem 2rem 2rem; /* top padding for navbar */
     }
 
     .content {
       max-width: 900px;
       margin: auto;
+      text-align: center;
     }
 
     h1 {
@@ -32,29 +78,66 @@
       color: #ffddff;
       border-bottom: 2px solid #d18aff;
       padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
     }
 
     p {
       line-height: 1.6;
       margin-bottom: 1.5rem;
+      font-size: 1.1rem;
     }
 
-    a {
+    .contact-links a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
       color: #d18aff;
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
     }
 
-    a:hover {
+    .contact-links a:hover {
       text-decoration: underline;
+      color: #ffddff;
+    }
+
+    .icon {
+      vertical-align: middle;
+      margin-right: 0.4rem;
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="research.html">My Research</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
   <div class="overlay">
     <div class="content">
-      <h1>Contact Me:</h1>
+      <h1>Keep in Touch :)</h1>
+
+      </p>
+
+      <div class="contact-links">
+        <p>
+          Email: <a href="mailto:svborges@uwm.edu">sarahvb@example.com</a><br />
+          ORCID: <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">orcid.org/0000-0000-0000-0000</a><br />
+        </p>
+      </div>
 
       <p>
+        I’m always happy to talk about research, science outreach, or anything else.  
+        Thanks for visiting my page 🌟
       </p>
     </div>
   </div>
