@@ -15,11 +15,56 @@
       color: #eaeaea;
     }
 
-    /* Semi-transparent layer for readability */
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #d18aff;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #eaeaea;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #d18aff;
+    }
+
+    .nav-links a.active {
+      color: #ffddff;
+      border-bottom: 2px solid #d18aff;
+      padding-bottom: 0.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+    /* ===== PAGE CONTENT ===== */
     .overlay {
       background-color: rgba(0, 0, 0, 0.75);
       min-height: 100vh;
-      padding: 2rem;
+      padding: 6rem 2rem 2rem; /* top padding added for navbar */
     }
 
     .content {
@@ -80,71 +125,85 @@
   </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="research.html">My Research</a>
+      <a href="outreach.html" class="active">Outreach</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
   <div class="overlay">
     <div class="content">
-      <h1>Science Outreach </h1>
+      <h1>Science Outreach</h1>
 
-  
       <p>
-        I’m passionate about sharing physics and astronomy with the general public. Since 2021, I have been a member of <strong>Coffeeshop Astrophysics</strong>, a science outreach initiative run by graduate students and postdocs from the <em>Center of Gravitation, Cosmology and Astrophysics</em> at the University of Wisconsin–Milwaukee.  
+        I’m passionate about sharing physics and astronomy with the general public. Since 2021, I have been a member of <strong>Coffeeshop Astrophysics</strong>, a science outreach initiative run by graduate students and postdocs from the <em>Center of Gravitation, Cosmology and Astrophysics</em> at the University of Wisconsin–Milwaukee.
       </p>
 
       <p>
-        If you’d like to learn more about Coffeeshop Astrophysics, visit our 
-        <a href="https://coffeeshopastrophysics.github.io/" target="_blank">website</a> 
-        or check out the 
-        <a href="https://www.aps.org/apsnews/2024/06/coffeeshop-astrophysics" target="_blank">APS article about our work</a>.  
+        If you’d like to learn more about Coffeeshop Astrophysics, visit our
+        <a href="https://coffeeshopastrophysics.github.io/" target="_blank">website</a>
+        or check out the
+        <a href="https://www.aps.org/apsnews/2024/06/coffeeshop-astrophysics" target="_blank">APS article about our work</a>.
         Below you’ll find a few of the talks I’ve been part of.
       </p>
 
       <div class="video-section">
-        <h2> Auroras: Cosmic Light Show, Mar. 29, 2025 (co-presenters: Sashwat and Kumar) </h2>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/MHQ6qt7C7Jc" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="video-section">
-        <h2>Galaxies: From Cradle to Grave, Sept. 28, 2024 (co-presenters: Sashwat and Kumar) </h2>
+        <h2>Auroras: Cosmic Light Show — Mar. 29, 2025 (co-presenters: Sashwat and Kumar)</h2>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/zn7KT1a47wo?start=2337" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-section">
-        <h2>The Last 10 Years of Astrophysics, May 11, 2024 (co-presenter: Laila Vreeschower)</h2>
+        <h2>Galaxies: From Cradle to Grave — Sept. 28, 2024 (co-presenters: Sashwat and Kumar)</h2>
         <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/phEO6f4VGCI?start=2098" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/MHQ6qt7C7Jc" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-section">
-        <h2>Ancient Astronomy, Sep. 23, 2023 (co-presenter: Sashwat Sardesai) </h2>
+        <h2>The Last 10 Years of Astrophysics — May 11, 2024 (co-presenter: Laila Vreeschower)</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/phEO6f4VGCI?start=2098" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-section">
+        <h2>Ancient Astronomy — Sep. 23, 2023 (co-presenter: Sashwat Sardesai)</h2>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/fIZVzMdeOxQ?start=126" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-section">
-        <h2>The Science of Science Fiction - May 6, 2023 (co-presenter: Simon Yeung) </h2>
+        <h2>The Science of Science Fiction — May 6, 2023 (co-presenter: Simon Yeung)</h2>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/aPWXub0M6pQ?start=579" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-section">
-        <h2>How Do Stars Float? Great Questions from Kids You Might Not Know the Answer To, Sep. 24, 2022 (co-presenter: Pratyusava Baral) </h2>
+        <h2>How Do Stars Float? — Sep. 24, 2022 (co-presenter: Pratyusava Baral)</h2>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/P82kAsoFvAk" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-section">
-        <h2>The Secrets of Neutron Stars, Apr.23, 2022 (co-presenter: Ian Brown) </h2>
+        <h2>The Secrets of Neutron Stars — Apr. 23, 2022 (co-presenter: Ian Brown)</h2>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/Kkcps9R28to?list=PLp_A0eS7BZhPkrAoCHn-k7ABTduD7yk1S&index=3" allowfullscreen></iframe>
         </div>
       </div>
+
     </div>
   </div>
 </body>
