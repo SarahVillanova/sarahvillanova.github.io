@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>"Accomplishments"</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('plants.png'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #eaeaea;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #CC5E13;
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #CC5E13;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #eaeaea;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #CC5E13;
+    }
+
+    .nav-links a.active {
+      color: #FFD1B3;
+      border-bottom: 2px solid #CC5E13;
+      padding-bottom: 0.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+    /* ===== PAGE CONTENT ===== */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 6rem 2rem 2rem; /* padding-top for navbar */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #FFD1B3;
+      border-bottom: 2px solid #CC5E13;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #eaeaea;
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    /* ===== CV EMBED ===== */
+    .cv-container {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 900px;
+      height: 85vh;
+      border: 2px solid #CC5E13;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .download-link {
+      margin-top: 1rem;
+      color: #CC5E13;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-link:hover {
+      text-decoration: underline;
+      color: #FFD1B3;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #999;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">My Research</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="cv.html" class="active">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="overlay">
+    <h1>Curriculum Vitae</h1>
+
+    <p>
+      Below you can browse or download my full CV.  
+      It includes my academic background, research experience, publications, and outreach activities.
+    </p>
+    <a class="download-link" href="Sarah_CV.pdf" target="_blank" download>Download PDF</a>
+
+    <div class="cv-container">
+      <iframe src="Sarah_CV.pdf#toolbar=0" title="Sarah Villanova Borges CV"></iframe>
+    </div>
+
+    
+    <footer>&copy; 2025 Sarah Villanova Borges</footer>
+  </div>
+
+</body>
+</html>
