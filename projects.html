@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>What do I do?</title>
+  <title>Who am I?</title>
+
+    <!-- ===== Favicon (Tab Icon) ===== -->
+  <link rel="icon" type="image/png" href="pne.jpg" />
+  
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-image: url('yosemite.jpg'); /* Replace with your background image */
+      background-image: url('diamantina.jpg'); /* Replace with your background image */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -20,9 +24,9 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #253D2C;
+      background-color: rgba(234, 5, 5, 0.75);
       backdrop-filter: blur(5px);
-      border-bottom: 1px solid #2E6F40;
+      border-bottom: 1px solid #CD1C18;
       z-index: 1000;
       display: flex;
       justify-content: center;
@@ -43,28 +47,19 @@
     }
 
     .nav-links a:hover {
-      color: #2E6F40;
+      color: #CD1C18;
     }
 
     .nav-links a.active {
-      color: #CFFFDC;
-      border-bottom: 2px solid #2E6F40;
+      color: #FFA896;
       padding-bottom: 0.2rem;
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-    }
-
-    /* ===== PAGE CONTENT ===== */
+    /* ===== CONTENT ===== */
     .overlay {
       background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
-      padding: 6rem 2rem 2rem; /* Add top padding for navbar */
+      padding: 6rem 2rem 2rem; /* Add top padding so content sits below navbar */
     }
 
     .content {
@@ -74,17 +69,10 @@
 
     h1 {
       font-size: 2.5rem;
-      color: #CFFFDC;
-      border-bottom: 2px solid #2E6F40;
+      color: #FFA896;
+      border-bottom: 2px solid #CD1C18;
       padding-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #CFFFDC;
-      margin-top: 2rem;
-      border-bottom: 1px solid #2E6F40;
-      padding-bottom: 0.3rem;
+      text-align: left;
     }
 
     p {
@@ -92,41 +80,21 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Smaller, centered video */
-    .video-wrapper {
-      position: relative;
-      width: 70%;
-      margin: 1.5rem auto;
-      padding-bottom: 39.375%; /* 16:9 ratio scaled to 70% width */
-      height: 0;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(209, 138, 255, 0.5);
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    @media (max-width: 768px) {
-      .video-wrapper {
-        width: 100%;
-        padding-bottom: 56.25%;
-      }
-    }
-
     a {
-      color: #2E6F40;
+      color: #CD1C18;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
@@ -136,10 +104,10 @@
   <nav class="navbar">
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="projects.html" class="active">My Research</a>
+      <a href="about.html" class="active">About Me</a>
+      <a href="projects.html">My Research</a>
       <a href="outreach.html">Outreach</a>
-      <a href="cv.html">CV</a>
+      <a href="Sarah_CV.pdf">CV</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -147,46 +115,34 @@
   <!-- Page Content -->
   <div class="overlay">
     <div class="content">
-      <h1>My Research</h1>
+      <h1>About Me</h1>
 
       <p>
-        My research focuses on the astrophysical processes that shape the lives and deaths of stars, especially through complex binary interactions and exotic compact objects. I use numerical simulations and theoretical modeling to study how these systems evolve, radiate, and ultimately influence the universe around them.
-      </p>
-
-      <h2>Common Envelope Simulations</h2>
-      <p>
-        The common envelope phase is one of the least understood but most crucial stages in binary star evolution. During this phase, one star expands and engulfs its companion, creating a shared gaseous envelope. This process can lead to the formation of close compact binaries, such as white dwarf–neutron star or black hole–neutron star systems, which are key sources of gravitational waves.
+    Hi, I’m Sarah Villanova Borges, and I was born in Minas Gerais, Brazil, a state without the famous Brazilian beaches and rainforests. Instead, we have hills, lots of them. Look to the horizon, and you’ll see rolling green hills covered in short vegetation. We also have incredible food and beautiful historical cities. If you ever visit Brazil, I highly recommend it!
       </p>
 
       <p>
-        In my Ph.D. work, I perform <strong>3D hydrodynamic simulations</strong> of common envelope evolution to understand how energy and angular momentum are transferred within the system. These simulations help constrain the physical conditions that determine whether the envelope is successfully ejected or whether the stars merge. My goal is to connect simulation outcomes with observations of post-common-envelope binaries and gravitational wave progenitors.
-      </p>
-
-      <h2>Emission Models for SGRs/AXPs</h2>
-      <p>
-        In addition to binary interactions, I’m interested in highly magnetized neutron stars known as <strong>Soft Gamma Repeaters (SGRs)</strong> and <strong>Anomalous X-ray Pulsars (AXPs)</strong>. These objects are thought to be <em>magnetars</em> — neutron stars powered by their extreme magnetic fields rather than by accretion or rotation.
+    I come from a family of engineers. My mom and her dad before her both graduated in civil engineering. As soon as I learned what being an engineer meant, I wanted to follow in their footsteps. But destiny had other plans. Growing up in the early 2000s, I was surrounded by news about space shuttles and the discovery of exoplanets, and I soon fell in love with astronomy and space.
       </p>
 
       <p>
-        My work on emission models explores how the magnetic field geometry and surface processes of magnetars produce their characteristic X-ray and gamma-ray emission. By comparing theoretical predictions with observational data, we can gain insight into their magnetic evolution, crustal dynamics, and the mechanisms behind their bursts and flares.
+      Eventually, I found a compromise between my childhood dream of becoming an engineer and my fascination with the stars: I decided to study aeronautical engineering. I graduated in 2017 from ITA (Instituto Tecnológico de Aeronáutica). But the stars didn’t want to let me go without a fight. I went on to complete a master’s in physics, also at ITA, studying magnetars. Now, I’m in the final year of my Ph.D. at the University of Wisconsin–Milwaukee, where I work on numerical simulations of common envelope evolution.
       </p>
 
       <p>
-        Below is an interview I participated in, where I discuss my paper and explain some of the ideas behind my emission modeling work:
-      </p>
-
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/JPqG7-ifE_k?start=13" allowfullscreen></iframe>
-      </div>
-
-      <p>
-        Both of these research directions — binary evolution and magnetar emission — share a common goal: to understand how compact objects form, evolve, and interact with their environments, shaping the observable universe in the process.
+      There are many things I love about my work. First, I truly enjoy learning about astrophysics. Second, I’m passionate about science communication, sharing the same beauty of astrophysics that mesmerized a younger me with others. And third, I love the opportunities to travel and live in different places that research brings. In fact, all the background images on my website are from places I wouldn't have visited if it weren't for research. This background is the only exception, is from Diamantina, a historical touristic city in my home state back in Brazil.
       </p>
 
       <p>
-        Learn more about my <a href="cv.html">CV</a>, <a href="outreach.html">outreach work</a>, or <a href="contact.html">get in touch</a>.
+      Outside of work, I have a lot of hobbies. You’ll often find me doing jigsaw puzzles, building Lego, or reading fantasy and murder mysteries. I believe that a pinch of challenge and adventure, whether it’s through my research or solving a really hard jigsaw puzzle, is what makes life interesting. I also love listening to music, traveling, sewing, cooking, and going to the cinema, concerts, and music festivals. If you are ever in Milwaukee in June or July, I highly recommend the best music festival of all, Summerfest. And at any time of the year, I recommend the Oriental Theatre, my absolute favorite cinema.
+      </p>
+  
+
+      <p>
+        Learn more about my <a href="cv.html">CV</a>, <a href="projects.html">research projects</a>, or <a href="contact.html">get in touch</a>.
       </p>
     </div>
   </div>
+
 </body>
 </html>
