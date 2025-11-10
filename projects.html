@@ -3,31 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>What do I do?</title>
+  <title>My Research</title>
+
+  <link rel="icon" type="image/png" href="pne.jpg" />
+
+  <!-- MathJax for LaTeX-style equations -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-image: url('yosemite.jpg'); /* Replace with your background image */
+      background-image: url('yosemite.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       color: #eaeaea;
     }
 
-    /* ===== NAVBAR ===== */
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       background-color: #253D2C;
-      backdrop-filter: blur(5px);
       border-bottom: 1px solid #2E6F40;
-      z-index: 1000;
       display: flex;
       justify-content: center;
-      align-items: center;
       padding: 0.8rem 1rem;
+      z-index: 1000;
     }
 
     .nav-links {
@@ -60,11 +69,10 @@
       }
     }
 
-    /* ===== PAGE CONTENT ===== */
     .overlay {
       background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
-      padding: 6rem 2rem 2rem; /* Add top padding for navbar */
+      padding: 6rem 2rem 2rem;
     }
 
     .content {
@@ -92,12 +100,17 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Smaller, centered video */
+    h3 {
+      font-size: 1.3rem;
+      color: #CFFFDC;
+      margin-top: 1.2rem;
+    }
+
     .video-wrapper {
       position: relative;
       width: 70%;
       margin: 1.5rem auto;
-      padding-bottom: 39.375%; /* 16:9 ratio scaled to 70% width */
+      padding-bottom: 39.375%;
       height: 0;
       overflow: hidden;
       border-radius: 10px;
@@ -150,41 +163,43 @@
       <h1>My Research</h1>
 
       <p>
-       Currently in preparation
-
+        I have explored two areas of stellar astrophysics: emission models for soft gamma-ray repeaters and anomalous X-ray pulsars (SGR/AXPs) and numerical simulations of common envelope evolution (CEE). My work in both domains is united by a central goal: developing and improving theoretical models to better explain observations.
       </p>
 
       <h2>Common Envelope Simulations</h2>
       <p>
-        Currently in preparation
+        CEE is a phase of binary evolution when a giant star engulfs its companion and is a progenitor of systems such as X-ray binaries and merging compact objects. The energy formalism for CEE assumes that the loss of orbital energy ($\Delta E_{\text{orb}}$) powers the ejection of the envelope, whose binding energy is $E_{\text{env}}$, with an efficiency $\alpha$: 
+        $$E_{\text{env}} = \alpha \, \Delta E_{\text{orb}}.$$
+        Most binary population synthesis codes adopt a single efficiency $\alpha$ for all systems, although this is unrealistic. The main difficulty in determining $\alpha$ lies in reducing a wide range of multiscale physics into a single parameter, combined with the scarcity of direct observations of CEE. My past, current, and future projects all center on this goal.
       </p>
 
+      <h3>Envelope Homologous Expansion</h3>
       <p>
+        In a <em>MNRAS</em> publication where I am the second author (<a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.526.5365V/abstract" target="_blank" rel="noopener">Valsan et al., 2023</a>), we demonstrated through 3D hydrodynamic simulations using the moving-mesh code <strong>MANGA</strong> that CEE ejecta become homologous after sufficient time. Once this stage is reached, the subsequent evolution can be followed accurately with a 1D model, reducing computational cost by limiting 3D calculations to the onset of homologous ejection. My contribution to this work was the development of a 1D spherically symmetric hydrodynamics code used to evolve the ejected envelope after homologous expansion is reached.
       </p>
 
+      <h3>A Correlation Between Post–Plunge-in Separation and Mass Ratio</h3>
+      <p>
+        Knowing $\alpha$ is essential for predicting the final separation of a system based on its initial parameters. A recent work has shown that the final separation from AGB simulations varies linearly with the mass ratio (Sand et al., 2020). Based on this, I ran 13 CEE simulations with RGB primaries (1–2 M$_\odot$) across four mass ratios and identified a linear correlation between the post–plunge-in separation and the mass ratio, normalized by the giant’s radius. I compared those results with all CEE simulations in the literature (RGB, AGB, and supergiant) and found that the correlation persists, even for partially bound envelopes. … A single-author publication is currently submitted (arXiv version available: <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251102150B/abstract" target="_blank" rel="noopener">arXiv:2511.02150</a>).
+
+      </p>
+
+      <h3>Comparing CEE Simulations with PNe</h3>
+      <p>
+        Post-CEE planetary nebulae (PNe) do not reflect the ejected envelope in its pristine form; winds from the central core also affect the morphology. I simulated how spherical winds from a pre-white-dwarf core interact with the CEE ejected envelope to form bipolar PNe. To do this, I mapped the ejected envelope from <strong>MANGA</strong> simulations into the AMR code <strong>RAMSES</strong>. As the envelope expands, I adapted RAMSES to gradually reduce refinement levels at the center, lowering computational cost. These adaptations allowed the simulations to reach timescales up to 100 years, far exceeding the ∼5 years achieved by Zou et al. (2020). I observed that initially bipolar morphologies gradually evolved into an elliptical form, consistent with the 2D wind simulations of García-Segura et al. (2018), but observed here for the first time in 3D. A first-author publication is currently in preparation.
+      </p>
       <h2>Emission Models for SGRs/AXPs</h2>
       <p>
-      Currently in preparation
-
-      </p>
+The standard magnetar model struggles to reproduce its full spectral energy distribution (SED) of 4U 0142+61 from near-infrared to hard X-rays. For this reason, I explored whether this object could instead be explained by an accreting white dwarf (WD).  In this model, X-rays arise from bremsstrahlung emission and hot surface spots, whereas the IR/optical radiation originates from the WD photosphere, the bremsstrahlung tail, and a surrounding passive disk modeled as a multi-temperature blackbody.       </p>
 
       <p>
-     Currently in preparation
-      </p>
-
-      <p>
-        Below is an youtube video feature in the AAS channel, where I discuss my paper and explain some of the ideas behind my emission modeling work:
+        Below is a YouTube video feature on the AAS channel where I discuss my <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...895...26B/abstract" target="_blank" rel="noopener">paper</a>:
       </p>
 
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/JPqG7-ifE_k?start=13" allowfullscreen></iframe>
       </div>
 
-      <p>
-      </p>
-
-      <p>
-      </p>
     </div>
   </div>
 </body>
